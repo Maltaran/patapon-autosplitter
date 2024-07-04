@@ -1,7 +1,7 @@
 /*
  * Autosplitter by Maltaran
  * Game: Patapon 2
- * PPSSPP versions: 1.7 - 1.12.3
+ * PPSSPP versions: 1.7 - 1.17.1
  * Game verisons: European and American
  */
 state("PPSSPPWindows64") { }
@@ -33,6 +33,47 @@ init
     }
     else vars.region = "x";
     switch (modules.First().FileVersionInfo.FileVersion) {
+        case "v1.17.1":
+            vars.baseOffset = 0xF9B000; break;
+        case "v1.17":
+            vars.baseOffset = 0xF95EA0; break;
+        case "v1.16.6":
+            vars.baseOffset = 0xF71E30; break;
+        case "v1.16.5":
+            vars.baseOffset = 0xF71E60; break;
+        case "v1.16.4":
+            vars.baseOffset = 0xF70E60; break;
+        case "v1.16.3":
+            vars.baseOffset = 0xF6EE60; break;
+        case "v1.16.2":
+        case "v1.16.1":
+            vars.baseOffset = 0xF6CE60; break;
+        case "v1.16":
+            vars.baseOffset = 0xF6CD60; break;
+        case "v1.15.4":
+            vars.baseOffset = 0xEFECC0; break;
+        case "v1.15.3":
+        case "v1.15.2":
+        case "v1.15.1":
+            vars.baseOffset = 0xEFED20; break;
+        case "v1.15":
+            vars.baseOffset = 0xEFCD20; break;
+        case "v1.14.4":
+            vars.baseOffset = 0xDF7E58; break;
+        case "v1.14.3":
+            vars.baseOffset = 0xDF7E58; break;
+        case "v1.14.2":
+            vars.baseOffset = 0xDF6E58; break;
+        case "v1.14.1":
+            vars.baseOffset = 0xDF5DD8; break;
+        case "v1.14":
+            vars.baseOffset = 0xDF5C68; break;
+        case "v1.13.2":
+            vars.baseOffset = 0xDF10F0; break;
+        case "v1.13.1":
+            vars.baseOffset = 0xDEA130; break;
+        case "v1.13":
+            vars.baseOffset = 0xDE90F0; break;
         case "v1.12.3":
         case "v1.12.2":
         case "v1.12.1":
