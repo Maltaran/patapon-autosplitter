@@ -1,7 +1,7 @@
 /*
  * Autosplitter by Maltaran
  * Game: Patapon
- * PPSSPP versions: 1.7 - 1.17.1
+ * PPSSPP versions: 1.7 - 1.18.1
  * Game verisons: European, American and Japanese
  */
 state("PPSSPPWindows64") { }
@@ -35,6 +35,10 @@ init
     }
     else vars.region = "x";
     switch (modules.First().FileVersionInfo.FileVersion) {
+        case "v1.18.1":
+            vars.baseOffset = 0xFBA860; break;
+        case "v1.18":
+            vars.baseOffset = 0xFBCF90; break;
         case "v1.17.1":
             vars.baseOffset = 0xF9B000; break;
         case "v1.17":
